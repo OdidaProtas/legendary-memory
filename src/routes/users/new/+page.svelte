@@ -22,7 +22,7 @@
         error = false;
         saving = false;
         success = true;
-        goto(`/users/${res.data.id}`);
+        goto(`/users/${res.data.user.id}`);
       }
     } catch (error) {
       error = true;

@@ -18,7 +18,6 @@ export async function load({ locals, params }: RequestEvent) {
     return true;
   });
 
-  console.log(allUsers);
 
   let userObj = {
     username: user?.username,

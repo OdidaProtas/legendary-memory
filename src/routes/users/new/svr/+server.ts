@@ -12,7 +12,7 @@ export async function POST({ request, locals }: RequestEvent) {
 
   const sacco = await saccoRepository.findOneBy({ code: saccoCode });
 
-  const user = await userRepository.save({
+  const user = userRepository.create({
     username: name,
   });
   if (sacco) user.sacco = sacco;

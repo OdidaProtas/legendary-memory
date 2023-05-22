@@ -23,7 +23,6 @@ export class UserSubscriber implements EntitySubscriberInterface<User> {
     let code = `ID${event.entity.sacco.country}${formatID(event.entity.id)}`;
     event.entity.code = code;
     const updated = await datasource.getRepository(User).save(event.entity);
-    console.log("upd", updated);
   }
 }
 
